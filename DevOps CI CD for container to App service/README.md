@@ -4,7 +4,7 @@
 Agenda: 
 1.	Introduction
 2.	Planning CI build pipeline
-3.	Planning CD Deploy process
+3.	Planning CD Deploy/Release pipeline
 4.	Conclusion
 
 
@@ -103,7 +103,7 @@ steps:
 ![Step 8](imgs/CI_8.png)
 
 
-## 3.	Planning CD Deploy process
+## 3.	Planning CD Deploy/Release pipeline
 
 >•	The CD Deploy process involves creating or updating the necessary Azure App Services for each microservice and deploying the respective container images.<br/>
 •	If the Azure App Service does not exist, it will be created automatically during the deployment process.<br/>
