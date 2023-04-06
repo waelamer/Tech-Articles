@@ -1,6 +1,5 @@
-# Tech-Articles
 
-# Simplifying CI/CD Container-Based Microservices with Azure DevOps and Azure Infrastructure.
+# Tech-Articles | Simplifying CI/CD Container-Based Microservices with Azure DevOps and Azure Infrastructure.
 
 Agenda: 
 1.	Introduction
