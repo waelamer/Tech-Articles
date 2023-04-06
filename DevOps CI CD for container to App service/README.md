@@ -149,8 +149,6 @@ steps:
 #### STEP 5
 ![Step 5](imgs/CD_5.png)
 
-#### STEP 6
-![Step 6](imgs/CD_6.png)
 
 ### Clone the Article local
 > git clone https://github.com/waelamer/Tech-Articles.git
