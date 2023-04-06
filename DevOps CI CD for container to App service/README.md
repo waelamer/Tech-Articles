@@ -3,14 +3,10 @@
 
 Agenda: 
 1.	Introduction
-2.	Planning your CI/CD pipeline
-3.	Setting up your Azure App Service environment
-4.	Connecting your source control
-5.	Configuring your build process
-6.	Testing and validating your builds
-7.	Deploying your microservices
-8.	Monitoring and troubleshooting your pipeline
-9.	Conclusion
+2.	Planning CI pipeline
+3.	Setting up Azure App Service environment
+4.	Deploying CD build process
+5.	Conclusion
 
 
 
@@ -36,6 +32,52 @@ Agenda:
     -Continuous integration can be set up to automatically trigger a build when changes are pushed to the source control repository, automating the build process. <br />
     -Once the container image has been built, it can be pushed to the Azure Container Registry for storage and deployment. <br />
 >By following these steps, a streamlined and automated CI pipeline for the DealStore application can be set up on Azure App Service. <br />
+
+```yaml
+yaml: 
+pool:
+  name: Azure Pipelines
+steps:
+- task: AzureResourceGroupDeployment@2
+  displayName: 'Azure Deployment:Create Azure Container Registry'
+  inputs:
+    azureSubscription: 'DealStoreContainer - Azure'
+    resourceGroupName: 'DealStoreContainer-rg'
+    location: 'South Central US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/Microsoft/devops-project-samples/057f6cc268a62922d012067d069d58684e967d0a/armtemplates/webapp-containers/containerRegistry-template.json'
+    overrideParameters: '-registryName "DealStoreContaineracr" -registryLocation "South Central US" -registrySku "Standard"'
+
+- task: Docker@2
+  displayName: 'Deal Microservice buildAndPush'
+  inputs:
+    containerRegistry: Deal
+    repository: DealRepo
+    Dockerfile: Backend.Deal/Dockerfile
+
+- task: Docker@2
+  displayName: 'Provider Microservice buildAndPush'
+  inputs:
+    containerRegistry: Deal
+    repository: ProviderRepo
+    Dockerfile: Backend.Provider/Dockerfile
+
+- task: Docker@2
+  displayName: 'System Microservice buildAndPush'
+  inputs:
+    containerRegistry: Deal
+    repository: SystemRepo
+    Dockerfile: Backend.System/Dockerfile
+
+- task: Docker@2
+  displayName: 'Frontend Microservice buildAndPush'
+  inputs:
+    containerRegistry: Deal
+    repository: FrontendRepo
+    Dockerfile: Frontend/Dockerfile
+```
+
+
 
 #### STEP 1
 ![Step 1](imgs/CI_1.png)
