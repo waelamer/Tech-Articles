@@ -134,16 +134,22 @@ steps:
     TakeAppOfflineFlag: true
 ```
 
+#### STEP 1
 ![Step 1](imgs/CD_1.png)
 
+#### STEP 2
 ![Step 2](imgs/CD_2.png)
 
+#### STEP 3
 ![Step 3](imgs/CD_3.png)
 
+#### STEP 4
 ![Step 4](imgs/CD_4.png)
 
+#### STEP 5
 ![Step 5](imgs/CD_5.png)
 
+#### STEP 6
 ![Step 6](imgs/CD_6.png)
 
 ### Clone the Article local
