@@ -25,5 +25,22 @@ Agenda:
 >
 > In this article, we'll delve into the details of how these components come together to form a successful microservice architecture, focusing on how to implement Continuous Integration and Continuous Deployment (CI/CD) for microservices on Azure App Service. By >the end of this article, you'll have a solid understanding of how to build a modern, professional, and scalable web application using microservices on Azure App Service.
 
+
+
+## 2. Planning your CI/CD pipeline
+
+>Each microservice folder should contain a Dockerfile for building the container.
+
+    •	To set up the CI portion of the pipeline for the DealStore application, an Azure Container Registry needs to be created where the container images will be stored.
+    •	The build environment needs to be configured, including creating a build agent pool and specifying the tools and dependencies required to build each container image.
+    •	Each microservice folder should contain a Dockerfile, which specifies how the container image for that service should be built.
+    •	A build definition for each microservice needs to be created, which specifies the steps and configurations required to build the container image for that service.
+    •	Continuous integration can be set up to automatically trigger a build when changes are pushed to the source control repository, automating the build process.
+    •	Once the container image has been built, it can be pushed to the Azure Container Registry for storage and deployment.
+
+>By following these steps, a streamlined and automated CI pipeline for the DealStore application can be set up on Azure App Service.
+
+
+
 ### Clone the Article local
 > git clone https://github.com/waelamer/Tech-Articles.git
