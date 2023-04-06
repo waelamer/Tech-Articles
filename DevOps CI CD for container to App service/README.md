@@ -38,21 +38,28 @@ Agenda:
     -Once the container image has been built, it can be pushed to the Azure Container Registry for storage and deployment. <br />
 >By following these steps, a streamlined and automated CI pipeline for the DealStore application can be set up on Azure App Service. <br />
 
-
+#### STEP 1
 ![Step 1](imgs/CI_1.png)
 
+#### STEP 2
 ![Step 2](imgs/CI_2.png)
 
+#### STEP 3
 ![Step 3](imgs/CI_3.png)
 
+#### STEP 4
 ![Step 4](imgs/CI_4.png)
 
+#### STEP 5
 ![Step 5](imgs/CI_5.png)
 
+#### STEP 6
 ![Step 6](imgs/CI_6.png)
 
+#### STEP 7
 ![Step 7](imgs/CI_7.png)
 
+#### STEP 8
 ![Step 8](imgs/CI_8.png)
 
 
