@@ -3,8 +3,8 @@
 
 Agenda: 
 1.	Introduction
-2.	Planning CI pipeline
-3.	Deploying CD build process
+2.	Planning CI build pipeline
+3.	Planning CD Deploy process
 4.	Conclusion
 
 
@@ -21,7 +21,7 @@ Agenda:
 
 
 
-## 2. Planning your CI/CD pipeline
+## 2. PPlanning CI build pipeline
 
 >Each microservice folder should contain a Dockerfile for building the container. <br />
     -To set up the CI portion of the pipeline for the DealStore application, an Azure Container Registry needs to be created where the container images will be stored. <br />
@@ -103,7 +103,13 @@ steps:
 ![Step 8](imgs/CI_8.png)
 
 
-## 3.	Deploying CD build process
+## 3.	Planning CD Deploy process
+
+>•	The CD Deploy process involves creating or updating the necessary Azure App Services for each microservice and deploying the respective container images.<br/>
+•	If the Azure App Service does not exist, it will be created automatically during the deployment process.<br/>
+•	If the Azure App Service already exists, it will be updated with the new container image during deployment.<br/>
+•	The CD Deploy process can be configured to occur automatically after a successful build or manually triggered as needed.<br/>
+•	With the CD Deploy process in place, the application can be easily and reliably deployed to Azure App Service, creating a scalable and reliable environment for the application.<br/>
 
 
 ```yaml
@@ -150,5 +156,18 @@ steps:
 ![Step 5](imgs/CD_5.png)
 
 
-### Clone the Article local
-> git clone https://github.com/waelamer/Tech-Articles.git
+## 4.	Conclusion
+
+>•	After successfully setting up the CI/CD pipeline for the DealStore application, the necessary infrastructure will be created and all container images will be stored in the DealStoreContaineracr Repository.<br/>
+•	The microservices will be automatically deployed to their respective Azure App Services, creating a scalable and reliable environment for the application.<br/>
+•	With the CI/CD pipeline in place, developers can easily and quickly make changes to the application without having to worry about manually deploying and managing the infrastructure.<br/>
+•	Additionally, the use of microservices and containerization allows for greater flexibility and scalability, as each service can be independently scaled and deployed as needed.<br/>
+•	Overall, the implementation of CI/CD for microservices on Azure App Service helps to streamline the development process and improve the reliability and scalability of the DealStore application.<br/>
+
+#### Resources
+![Step 1](imgs/re_2.png)
+
+### CREDITS
+> Cloud Architect<br/>
+> BSc, Wael Amer <br/>
+> wael.amer@gmail.com<br/>
