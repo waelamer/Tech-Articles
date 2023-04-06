@@ -4,9 +4,8 @@
 Agenda: 
 1.	Introduction
 2.	Planning CI pipeline
-3.	Setting up Azure App Service environment
-4.	Deploying CD build process
-5.	Conclusion
+3.	Deploying CD build process
+4.	Conclusion
 
 
 
@@ -103,6 +102,49 @@ steps:
 #### STEP 8
 ![Step 8](imgs/CI_8.png)
 
+
+## 3.	Deploying CD build process
+
+
+```yaml
+steps:
+- task: AzureResourceGroupDeployment@2
+  displayName: 'Azure Deployment:Create Azure App Service'
+  inputs:
+    azureSubscription: 'DealStoreContainer - Azure'
+    resourceGroupName: 'DealStoreContainer-rg'
+    location: 'South Central US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/Microsoft/devops-project-samples/057f6cc268a62922d012067d069d58684e967d0a/armtemplates/webapp-containers/container-webapp-template.json'
+    overrideParameters: '-webAppName FrontendUIContainer -hostingPlanName DealStoreContainer-plan -appInsightsLocation "South Central US" -sku "S1 Standard" -registryName "DealStoreContaineracr" -registryLocation "South Central US" -registrySku "Standard" 
+    imageName frontendrepo:$(Build.BuildId)'
+```
+
+```yaml
+steps:
+- task: AzureRmWebAppDeployment@3
+  displayName: 'Deploy Azure App Service'
+  inputs:
+    azureSubscription: 'DealStoreContainer - Azure'
+    appType: applinux
+    WebAppName: FrontendUIContainer
+    DockerNamespace: dealstorecontaineracr.azurecr.io
+    DockerRepository: frontendrepo
+    DockerImageTag: '$(Build.BuildId)'
+    TakeAppOfflineFlag: true
+```
+
+![Step 1](imgs/CD_1.png)
+
+![Step 2](imgs/CD_2.png)
+
+![Step 3](imgs/CD_3.png)
+
+![Step 4](imgs/CD_4.png)
+
+![Step 5](imgs/CD_5.png)
+
+![Step 6](imgs/CD_6.png)
 
 ### Clone the Article local
 > git clone https://github.com/waelamer/Tech-Articles.git
