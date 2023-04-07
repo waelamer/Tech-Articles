@@ -23,7 +23,7 @@ Agenda:
 
 
 
-## 2. PPlanning CI build pipeline
+## 2. Planning CI build pipeline
 
 >Each microservice folder should contain a Dockerfile for building the container. <br />
     -To set up the CI portion of the pipeline for the DealStore application, an Azure Container Registry needs to be created where the container images will be stored. <br />
