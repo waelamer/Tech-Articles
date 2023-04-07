@@ -11,7 +11,9 @@ Agenda:
 
 ## 1.	Introduction
 
->"DealStore" is a responsive web application with a web API in the background. The content, navigation elements, and structural layout of the website can be adapted to the screen resolution of the mobile device. The frontend was built using the Vue framework, a progressive JavaScript framework for creating web interfaces and one-page applications, to make the web application look modern and professional. An API gateway from Envoy is used as the interface between the frontend and the microservices. The backend of the  application was built using .NET 5, a framework for developing desktop, web, cloud, and mobile applications. The application uses a database that runs on the Azure Cloud and utilizes a MS SQL Server in a serverless manner.
+>"DealStore" is a responsive web application with a web API in the background. The content, navigation elements, and structural layout of the website can be adapted to the screen resolution of the mobile device. The frontend was built using the Vue framework, a progressive JavaScript framework for creating web interfaces and one-page applications, to make the web application look modern and professional. An API gateway from Envoy is used as the interface between the frontend and the microservices. The backend of the  application was built using .NET 5, a framework for developing desktop, web, cloud, and mobile applications. The application uses a database that runs on the Azure Cloud and utilizes a MS SQL Server in a serverless manner.<br/>
+#### Architecture
+![Architecture](imgs/Architecture.jpg)
 >
 >#### DEAL, Provider and System microservice as backend and Frontend as a standalone service .
 >
