@@ -23,7 +23,7 @@ az resource list --resource-group exampleRG --resource-type "Microsoft.Storage/s
 az resource list --resource-group exampleRG --resource-type "Microsoft.Compute/virtualMachines"
 
 az group delete --name exampleRG
-ssss
+
 ```
 
 # Global
