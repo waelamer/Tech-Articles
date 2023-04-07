@@ -24,6 +24,21 @@ az resource list --resource-group exampleRG --resource-type "Microsoft.Compute/v
 
 az group delete --name exampleRG
 
+#---------------Generate the BECIP Code from resource
+## 3 ways
+# First
+az group export --resource-group exampleRG  >  Generated\exampleRG_template.json
+az bicep decompile --file Generated\exampleRG_template.json
+
+# Second
+using the VS code extention CTR+Shift+P the BECIP:INSERT resource => then give it the resource ID EX: "/subscriptions/39aac29d-2d84-4f93-a60b-601c6dec6a53/resourceGroups/exampleRG"
+then the BECIP code will be generated 
+you can use the Azure Resource Explorer at https://resources.azure.com/ to extract the resource-ID .
+
+# third 
+throw the Portal .
+
+
 ```
 
 # Global
