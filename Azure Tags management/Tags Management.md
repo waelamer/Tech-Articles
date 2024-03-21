@@ -10,8 +10,10 @@ Before managing tags or making any changes to your Azure infrastructure, it's es
 
 To export tag information, execute the following Azure CLI command:
 
-```bash
-az graph query -q "Resources | where  isnotempty(tags) | project subscriptionId,tags | mvexpand tags | summarize count() by Tags=dynamic_to_json(tags),subscriptionId | order by count_"
+```powershell
+$tagList=az graph query -q "Resources | where  isnotempty(tags) | project subscriptionId,tags | mvexpand tags | summarize count() by Tags=dynamic_to_json(tags),subscriptionId | order by count_" | convertfrom-json
+
+ Write-Host $tagList.data
 
 ```
 Executing this command will provide you with valuable insights into your Azure resources' tagging patterns, enabling you to make informed decisions when managing tags and optimizing resource organization.
