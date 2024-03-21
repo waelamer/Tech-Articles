@@ -171,5 +171,5 @@ steps:
 
 ### CREDITS
 > Cloud Architect<br/>
-> BSc, Wael Amer <br/>
+> MSc, Wael Amer <br/>
 > wael.amer@gmail.com<br/>

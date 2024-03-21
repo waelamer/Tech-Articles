@@ -77,3 +77,8 @@ Implement monitoring mechanisms to track tag compliance and identify deviations 
 ## Conclusion
 
 Azure Tag Management offers a robust framework for organizing, managing, and optimizing resources within Azure environments. By harnessing the power of tags, organizations can improve operational efficiency, optimize cost allocation, and strengthen governance practices. Embracing best practices for Azure Tag Management empowers businesses to unlock the full potential of their Azure investments and drive sustainable growth.
+
+### CREDITS
+> Cloud Architect<br/>
+> MSc, Wael Amer <br/>
+> wael.amer@gmail.com<br/>
